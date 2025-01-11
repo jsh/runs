@@ -8,6 +8,8 @@ import time
 
 def generate_floats(n: int) -> list[float]:
     """Returns a list of n random floats"""
+    if not isinstance(n, int) or n <= 0:
+        raise ValueError("n must be a positive integer")
     return [random.uniform(0, 1) for _ in range(n)]
 
 
